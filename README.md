@@ -1,14 +1,6 @@
 # README #
 
-This README would normally document whatever steps are necessary to get your application up and running.
-
 ### What is this repository for? ###
-
-This is the enterprise cloud infrastructure as code (IAC) template. Fork this as a starting stucture for any product/application specific IAC needs. This will be version over time and will allow for upstream fork syncing to update any product repos with new capabiltiies or useful boilerplate.
-
-For details : https://confluence.wcgclinical.com/display/DA/Databricks+Compute+IAC
-* Version 0.1.0
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
 
 ### How do I get set up? ###
 
@@ -21,29 +13,6 @@ Will need local admin to do local development
   * Terragrunt (https://terragrunt.gruntwork.io/docs/getting-started/install/)
   * tflint (For local linting: https://github.com/terraform-linters/tflint#installation)
   * Go (For terratest: https://go.dev/doc/install)
-
-#### Setup Steps ####
-
-If just forked from the template project there are a few additonal first time configuration steps
-
-  * Make sure all Prereqs are installed locally
-  * Update readme contributing, "who to talk too", and "what is this repo for" section specific to your application.
-  * Update env.hcl files with application specific variables
-  * Explore provided base starting module and run tests to check setup
-  * Start having fun building your application by adding more modules/tests and environemnt impls
-
-Example steps of building out more of your application IAC
-
-  * Add a new modules/azure/compute if you need a vm in your base vnet and resource group
-  * Tests for the compute module can use the base module by defining base and source it relative ../../../base
-  * This can be exanded on with any of your modules, it can also point to branchs via git ref instead of local relative
-  * Once you are satisfied with a new module and passing tests add it to your _common with its defaults and environemnt vars
-  * Lay out impl/env changes with new folder - example azure/east-us/jenkins_controller. Pick a logical descriptive folder name
-  * Drop in the standard terragrunt.hcl file and make sure it point to your new _common module
-  * Run terragrunt run-all validate -v and fix any errors
-  * Move on to terragrunt plans until they work fixing any erros and then finally apply.
-
-
 
 #### Local Commands ####
 
