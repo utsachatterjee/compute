@@ -1,0 +1,22 @@
+{
+  "sbx": {
+    "ARM_CLIENT_ID": "<app-registration-applicationclient-id>",
+    "ARM_SUBSCRIPTION_ID": "<>",
+    "ARM_TENANT_ID": "<>"
+  },
+  "dev": {
+    "ARM_CLIENT_ID": "<>",
+    "ARM_SUBSCRIPTION_ID": "<>",
+    "ARM_TENANT_ID": "<>"
+  },
+  "tst": {
+    "ARM_CLIENT_ID": "<>",
+    "ARM_SUBSCRIPTION_ID": "<>",
+    "ARM_TENANT_ID": "<>"
+  },
+  "prd": {
+    "ARM_CLIENT_ID": "<>",
+    "ARM_SUBSCRIPTION_ID": "<>",
+    "ARM_TENANT_ID": "<>"
+  }
+}
