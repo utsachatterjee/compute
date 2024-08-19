@@ -80,16 +80,12 @@ tflint .\modules\azure\vnet\
 ## For cache, set this to avoid windows path char limit.
 export TERRAGRUNT_DOWNLOAD=c:/terragrunt_cache
 
-// example secrets to pass terraform from environment variables use get_env("ANSIBLE_GIT_TOKEN") in terragrunt hcl
-export ANSIBLE_GIT_TOKEN=<AnsibleRepoToken>
-export ANSIBLE_VAULT_PASS=<VaultPassword>
+// example secrets to pass terraform from environment variables use get_env("VARIABLENAME") in terragrunt hcl
+export TF_variable=<VARIABLENAME>
 
 ## Powershell Setup
 ## For cache, set this to avoid windows path char limit.
 $env:TERRAGRUNT_DOWNLOAD = 'c:/terragrunt_cache'
-// example secrets to pass terraform from environment variables use get_env("ANSIBLE_GIT_TOKEN") in terragrunt hcl
-$env:ANSIBLE_GIT_TOKEN = '<AnsibleRepoToken>'
-$env:ANSIBLE_VAULT_PASS = '<VaultPassword>'
 
 ## How to run Deployments
 ## Depending on where you run from, you get different scope of your action
@@ -115,16 +111,3 @@ terragrunt run-all apply
 terragrunt run-all destroy
 
 ```
-
-### Contribution guidelines ###
-
-* Create a feature branch for new funtionality
-* Writing tests for any module changes
-* Run local tests/linting before code reviews
-* Submit Code reviews to develop branch
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Justin Speers
-* Maintained by the DevOps team
