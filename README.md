@@ -17,24 +17,14 @@ Will need local admin to do local development
 #### Local Commands ####
 
 ```
-## Env inputs
-## These will be project specific. Here is example of two secret terrafomr varriables being set.
-$env:ANSIBLE_GIT_TOKEN = '<AnsibleRepoToken>'
-$env:ANSIBLE_VAULT_PASS = '<VaultPassword>'
-
-
 ## Run all Tests
 go test ./... -timeout 1000s -v
 
 ## Run specific
 go test ./... -timeout 1000s -run <NameofTest> -v
-#Examples
-go test ./... -timeout 1000s -run TestRGOnlyExample -v
-go test ./... -timeout 1000s -run TestRGWithVNetExample -v
 
 ## If a test passes locally and you dont make a change it is cached and doesnt rerun. This cleans cache and forces a reruns
-go clean -testcache
-```
+go clean -testcache```
 
 ```
 ## How to run linting
